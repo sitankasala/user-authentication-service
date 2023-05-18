@@ -1,1 +1,27 @@
-
+spring:
+  datasource:
+    url: jdbc:postgresql://jwt-user-auth.postgres.database.azure.com:5432/postgres
+    username: userauth@jwt-user-auth
+    password: ${jwt-user-auth-password}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  cloud:
+    azure:
+      keyvault:
+        enabled: true
+        secret:
+          property-sources[0]:
+            endpoint: https://akv-my-learning.vault.azure.net/
+            credential:
+              client-id: ${AZURE_AKV_CLIENT_ID}
+              client-secret: ${AZURE_AKV_CLIENT_SECRET}
+            profile:
+              tenant-id: ${AZURE_AKV_TENANT_ID}
