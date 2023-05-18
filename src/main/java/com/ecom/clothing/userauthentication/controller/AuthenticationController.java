@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthenticationController {
     @GetMapping("/helloworld")
     private ResponseEntity<String> getPassword(){
-        return new ResponseEntity<>("This is HelloWorld on azure vm ",HttpStatus.OK);
+        return new ResponseEntity<>("This is HelloWorld on azure vm from ",HttpStatus.OK);
     }
 
 }
