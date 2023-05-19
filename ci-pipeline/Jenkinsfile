@@ -15,7 +15,7 @@ pipeline{
             }
             steps{
                 script{
-                    withCredentials([azureServicePrincipal('3224f117-f1c8-4c16-af61-6fc5e39fd1fb')]) {
+                    withCredentials([azureServicePrincipal('8386d4ac-0575-4a56-904b-b579c7df6e4e')]) {
                         sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                         sh 'echo $(pwd)'
                         sh 'az account set --subscription $AZURE_SUBSCRIPTION_ID'
