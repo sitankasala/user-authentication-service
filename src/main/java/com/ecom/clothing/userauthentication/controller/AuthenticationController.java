@@ -16,6 +16,6 @@ public class AuthenticationController {
 
     @GetMapping("/getProducts")
     private ResponseEntity<String> getProducts(){
-        return new ResponseEntity<>("These are the products from azure ",HttpStatus.OK);
+        return new ResponseEntity<>("These are the products from azure app service ",HttpStatus.OK);
     }
 }
