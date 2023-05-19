@@ -22,6 +22,6 @@ spring:
             endpoint: https://user-auth-vault.vault.azure.net/
             credential:
               client-id: f9b0724a-9fbf-4186-86a9-14fbfefc90fe
-              client-secret: b4d9f7ca-a6e4-48a8-92c6-851f4fb5b7b1
+              client-secret: v2G8Q~RN.tObU_EmuBjpPCsbqbq8b3m9F2pHXaEV
             profile:
               tenant-id: b4d9f7ca-a6e4-48a8-92c6-851f4fb5b7b1
