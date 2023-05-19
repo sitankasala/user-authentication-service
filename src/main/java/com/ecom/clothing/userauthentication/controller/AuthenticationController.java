@@ -9,9 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @ControllerAdvice
 public class AuthenticationController {
-    @GetMapping("/helloworld")
-    private ResponseEntity<String> getPassword(){
+    @GetMapping("/healthCheck")
+    private ResponseEntity<String> healthCheck(){
         return new ResponseEntity<>("This is HelloWorld on azure vm from ",HttpStatus.OK);
     }
 
+    @GetMapping("/getProducts")
+    private ResponseEntity<String> getProducts(){
+        return new ResponseEntity<>("These are the products ",HttpStatus.OK);
+    }
 }
