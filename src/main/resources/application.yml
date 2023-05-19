@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:postgresql://jwt-user-auth.postgres.database.azure.com:5432/postgres
-    username: userauth@jwt-user-auth
+    username: userauth
     password: ${jwt-user-auth-password}
     driver-class-name: org.postgresql.Driver
   jpa:
@@ -19,9 +19,9 @@ spring:
         enabled: true
         secret:
           property-sources[0]:
-            endpoint: https://akv-my-learning.vault.azure.net/
+            endpoint: https://user-auth-vault.vault.azure.net/
             credential:
-              client-id: ${AZURE_AKV_CLIENT_ID}
-              client-secret: ${AZURE_AKV_CLIENT_SECRET}
+              client-id: ${AZURE_CLIENT_ID}
+              client-secret: ${AZURE_CLIENT_SECRET}
             profile:
-              tenant-id: ${AZURE_AKV_TENANT_ID}
+              tenant-id: ${AZURE_TENANT_ID}
