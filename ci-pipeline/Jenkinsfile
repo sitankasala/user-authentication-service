@@ -19,7 +19,7 @@ pipeline{
                         sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                         sh 'echo $(pwd)'
                         sh 'az account set --subscription $AZURE_SUBSCRIPTION_ID'
-                        sh "az webapp deployment source config-zip --src ./build/libs/user-authentication-service.jar -g $AZURE_RESOURCE_GROUP --n $AZURE_APP_SERVICE_NAME"
+                        sh "az webapp deployment source config-zip --src ./build/libs/user-authentication-service-0.0.1-SNAPSHOT.jar -g $AZURE_RESOURCE_GROUP --n $AZURE_APP_SERVICE_NAME"
                     }
                 }
             }
