@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-ap
-          path: '${{ github.workspace }}/build/libs/user-authentication-service-0.0.1-SNAPSHOT.jar'
+          path: '${{ github.workspace }}/build/libs/user-authentication-service.jar'
 
   deploy:
     runs-on: ubuntu-latest

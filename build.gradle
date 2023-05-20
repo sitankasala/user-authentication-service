@@ -14,7 +14,7 @@ configurations {
     }
 }
 
-jar{
+bootJar{
     archiveFileName = 'user-authentication-service.jar'
 }
 
